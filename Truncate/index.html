@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alpine.js Example - Cards (x-for with Local JSON Data)</title>
+    
+	
+	<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-grey-100 px-3 font-sans leading-normal tracking-normal">
+<div class="min-h-screen p-16 bg-gray-100">
+<!-- https://github.com/KevinBatdorf/alpine-magic-helpers -->
+<!-- https://cdn.jsdelivr.net/gh/kevinbatdorf/alpine-magic-helpers@0.2.x/dist/truncate.js -->
+
+<div
+    x-data="{ characters: 49, string: 'Press to expand, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}"
+    x-text="$truncate(string, characters)"
+    @click="characters = undefined"
+	class="cursor-pointer">
+</div>
+	
+<div class="h-1 border-t w-full my-32"></div>
+	
+<div
+    x-data="{ count: 5, string: 'Press to show more, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}"
+    x-text="$truncate(string, { words: count, ellipsis: ' ...read more' })"
+    @click="count = 0"
+	class="cursor-pointer">
+</div>
+	
+	
+	
+</div>
+
+
+<!-- Dev tools -->
+<div
+	id="alpine-devtools"
+	x-data="devtools()"
+	x-show="alpines.length"
+	x-init="start()">
+</div>
+
+
+
+
+    <script>
+      
+    </script>
+	
+	<script src="https://cdn.jsdelivr.net/gh/kevinbatdorf/alpine-magic-helpers/dist/truncate.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+  </body>
+</html>

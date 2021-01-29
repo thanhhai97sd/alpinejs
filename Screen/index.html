@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alpine.js Example - Cards (x-for with Local JSON Data)</title>
+    
+	
+	<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-grey-100 px-3 font-sans leading-normal tracking-normal">
+<div class="min-h-screen p-16 bg-gray-100">
+<!-- https://github.com/alpine-collective/alpine-magic-helpers -->
+<div x-data>
+	<p x-show="$screen('xs')" class="mb-4 font-bold">
+		This paragraph will show if the window is equal or larger than 0px.
+	</p>
+	<p x-show="$screen('sm')" class="mb-4 font-bold">
+		This paragraph will show if the window is equal or larger than 640px.
+	</p>
+	<p x-show="$screen('md')" class="mb-4 font-bold">
+		This paragraph will show if the window is equal or larger than 768px.
+	</p>
+	<p x-show="$screen('lg')" class="mb-4 font-bold">
+		This paragraph will show if the window is equal or larger than 1024px.
+	</p>
+	<p x-show="$screen('xl')" class="mb-4 font-bold">
+		This paragraph will show if the window is equal or larger than 1280px.
+	</p>
+	<p x-show="$screen('2xl')" class="mb-4 font-bold">
+		This paragraph will show if the window is equal or larger than 1536px.
+	</p>
+	<p x-show="$screen(999)" class="mb-4 font-bold">
+		This paragraph will show if the window is equal or larger than 999px.
+	</p>
+</div>
+	
+</div>
+
+
+
+    <script>
+      
+    </script>
+	
+	<script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers/dist/screen.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alpine.js Example - Cards (x-for with Local JSON Data)</title>
+    
+	
+	<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-grey-100 px-3 font-sans leading-normal tracking-normal">
+<div class="min-h-screen p-16 bg-gray-100">
+<!-- https://github.com/KevinBatdorf/alpine-magic-helpers -->
+<!-- https://cdn.jsdelivr.net/gh/kevinbatdorf/alpine-magic-helpers@latest/dist/interval.js -->
+Press to pause
+<div
+    x-data="{
+        timer: 500,
+		autoIntervalTest: true,
+		count: 0,
+        addOne: function() {
+            this.count++
+        }
+    }"
+    x-init="$interval(addOne, timer)"
+	x-text="count.toString()"
+	class="cursor-pointer"
+	@click="autoIntervalTest = !autoIntervalTest">
+</div>
+	
+	
+	
+	
+	
+	
+</div>
+
+
+<!-- Dev tools -->
+<div
+	id="alpine-devtools"
+	x-data="devtools()"
+	x-show="alpines.length"
+	x-init="start()">
+</div>
+
+
+    <script>
+      
+    </script>
+	
+	<script src="https://cdn.jsdelivr.net/gh/kevinbatdorf/alpine-magic-helpers@latest/dist/interval.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alpine.js Example - Cards (x-for with Local JSON Data)</title>
+    
+	
+	<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-grey-100 px-3 font-sans leading-normal tracking-normal">
+<div class="min-h-screen p-16 bg-gray-100">
+
+
+<div x-data>
+    <template x-for="item in $range(1, 5)">
+		<p x-text="item"></p>
+    </template>
+</div>
+	
+<hr class="my-6">
+	
+<div x-data>
+    <template x-for="item in $range(5)">
+		<p x-text="item"></p>
+    </template>
+</div>
+	
+
+	
+</div>
+
+
+    <script>
+      
+    </script>
+	
+	<script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers/dist/range.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+  </body>
+</html>
